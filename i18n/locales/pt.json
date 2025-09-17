@@ -1,0 +1,13 @@
+{
+    "header": {
+        "title": "Loja de Celulares",
+        "home": "Início",
+        "about": "Sobre",
+        "contact": "Contato",
+        "language": "Idioma",
+        "products": "Produtos"
+    },
+    "footer": {
+        "copyright": "Meu E-commerce. Todos os direitos reservados."
+    }
+}

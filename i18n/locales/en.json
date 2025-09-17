@@ -1,0 +1,13 @@
+{
+    "header": {
+        "title": "Phone Store",
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact",
+        "language": "Language",
+        "products": "Products"
+    },
+    "footer": {
+        "copyright": "My E-commerce. All rights reserved."
+    }
+}
