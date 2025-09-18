@@ -22,18 +22,14 @@
         }}</a>
       </nav>
 
+      <!-- Seletor de Idioma -->
       <div class="relative md:flex">
-        <select class="rounded-md p-2 text-black" v-model="locale">
-          <option
-            v-for="value in locales"
-            :key="value.code"
-            :value="value.code"
-            @click="setLocale(value.code)"
-            class="text-sm text-black"
-          >
-            {{ value.name }}
-          </option>
-        </select>
+        <UInputMenu
+          v-model="localeValue"
+          :items="languages"
+          value-key="code"
+          @update:model-value="changeLanguage"
+        />
       </div>
 
       <!-- Botão de Menu (visível em telas pequenas) -->
@@ -61,4 +57,17 @@
 
 <script setup>
 const { locale, locales, setLocale } = useI18n();
+
+const localeValue = reactive(locale.value);
+
+const languages = ref(
+  locales.value.map((loc) => ({
+    code: loc.code,
+    label: loc.name,
+  }))
+);
+
+const changeLanguage = (lang) => {
+  setLocale(lang);
+};
 </script>

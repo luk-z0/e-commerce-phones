@@ -9,5 +9,9 @@
     },
     "footer": {
         "copyright": "My E-commerce. All rights reserved."
+    },
+    "smartphones": {
+        "title": "Smartphone Details",
+        "subtitle": "Explore our collection of cutting-edge mobile phones."
     }
 }

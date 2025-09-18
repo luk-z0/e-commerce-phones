@@ -9,5 +9,9 @@
     },
     "footer": {
         "copyright": "Meu E-commerce. Todos os direitos reservados."
+    },
+    "smartphones": {
+        "title": "Detalhes do Smartphone",
+        "subtitle": "Explore nossa coleção de celulares de última geração."
     }
 }
