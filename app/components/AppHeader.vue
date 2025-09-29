@@ -8,10 +8,10 @@
 
       <!-- Menu (escondido em telas pequenas) -->
       <nav class="hidden md:flex space-x-6">
-        <a href="#" class="text-gray-600 hover:text-gray-800">{{
+        <a href="/" class="text-gray-600 hover:text-gray-800">{{
           $t("header.home")
         }}</a>
-        <a href="#" class="text-gray-600 hover:text-gray-800">{{
+        <a href="/smartphones" class="text-gray-600 hover:text-gray-800">{{
           $t("header.products")
         }}</a>
         <a href="#" class="text-gray-600 hover:text-gray-800">{{
@@ -25,10 +25,10 @@
       <!-- Seletor de Idioma -->
       <div class="relative md:flex">
         <UInputMenu
-          v-model="localeValue"
-          :items="languages"
-          value-key="code"
-          @update:model-value="changeLanguage"
+          v-model="selectedLocale"
+          :items="localeItems"
+          value-key="value"
+          @update:model-value="changeLocale"
         />
       </div>
 
@@ -56,18 +56,21 @@
 </template>
 
 <script setup>
+import { ref, computed, toRef } from "vue";
+import { useI18n } from "vue-i18n";
+
 const { locale, locales, setLocale } = useI18n();
 
-const localeValue = reactive(locale.value);
+const selectedLocale = ref(toRef(locale, "value"));
 
-const languages = ref(
-  locales.value.map((loc) => ({
-    code: loc.code,
-    label: loc.name,
-  }))
-);
+const localeItems = computed(() => {
+  return locales.value.map((l) => ({
+    label: l.name,
+    value: l.code,
+  }));
+});
 
-const changeLanguage = (lang) => {
-  setLocale(lang);
+const changeLocale = (newLocale) => {
+  setLocale(newLocale);
 };
 </script>
