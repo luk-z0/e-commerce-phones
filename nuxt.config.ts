@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxt/ui',
     '@nuxtjs/i18n',
+    '@prisma/nuxt'
   ],
   css: ['~/assets/css/main.css'],
   i18n: {
