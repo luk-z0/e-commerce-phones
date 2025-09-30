@@ -27,6 +27,7 @@ integração com banco de dados via Prisma.
 
 ## 📂 Estrutura
 
+```bash
 .
 ├── app/           # Páginas, layouts e componentes
 ├── prisma/        # Esquema e migrações do Prisma
@@ -35,7 +36,7 @@ integração com banco de dados via Prisma.
 ├── nuxt.config.ts # Configuração principal do Nuxt
 ├── package.json
 └── .env.example   # Variáveis de ambiente
-
+```
 
 ------------------------------------------------------------------------
 
