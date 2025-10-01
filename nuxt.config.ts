@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxt/ui',
     '@nuxtjs/i18n',
-    '@prisma/nuxt'
+    '@prisma/nuxt',
+    'nuxt-auth-utils'
   ],
   css: ['~/assets/css/main.css'],
   i18n: {
@@ -18,5 +19,13 @@ export default defineNuxtConfig({
       { code: 'en', name: 'English', file: 'en.json' },
       { code: 'pt', name: 'Português', file: 'pt.json' }
     ]
-  }
+  },
+  runtimeConfig: {
+    auth: {
+      google: {
+        clientId: process.env.NUXT_OAUTH_GOOGLE_CLIENT_ID || '',
+        clientSecret: process.env.NUXT_OAUTH_GOOGLE_CLIENT_SECRET || ''
+      },
+    }
+  },
 })

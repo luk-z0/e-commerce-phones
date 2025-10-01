@@ -5,7 +5,8 @@
         "about": "About",
         "contact": "Contact",
         "language": "Language",
-        "products": "Products"
+        "products": "Products",
+        "login": "Login"
     },
     "footer": {
         "copyright": "My E-commerce. All rights reserved."
@@ -13,5 +14,9 @@
     "smartphones": {
         "title": "Smartphone Details",
         "subtitle": "Explore our collection of cutting-edge mobile phones."
+    },
+    "login": {
+        "title": "Login",
+        "google": "Login with Google"
     }
 }
