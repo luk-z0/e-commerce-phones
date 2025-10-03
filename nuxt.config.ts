@@ -8,17 +8,18 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/i18n',
     '@prisma/nuxt',
-    'nuxt-auth-utils'
+    'nuxt-auth-utils',
+    '@nuxt/icon',
   ],
   css: ['~/assets/css/main.css'],
   i18n: {
-    defaultLocale: 'pt',
-    langDir: 'locales/',
     strategy: 'no_prefix',
     locales: [
-      { code: 'en', name: 'English', file: 'en.json' },
-      { code: 'pt', name: 'Português', file: 'pt.json' }
-    ]
+      { code: 'pt-BR', name: 'Português (Brasil)', file: 'pt-BR.json', flag: 'flag:br-4x3', slot: 'country' as const },
+      { code: 'en', name: 'English', file: 'en-US.json', flag: 'flag:us-4x3', slot: 'country' as const },
+    ],
+    defaultLocale: 'pt_br',
+    langDir: 'locales/',
   },
   runtimeConfig: {
     auth: {
