@@ -22,7 +22,7 @@ const items = ref<DropdownMenuItem[][]>([
     {
       label: user.value?.name,
       avatar: {
-        src: user.value?.urlPicture || undefined,
+        src: user.value?.urlPicture || 'https://avatar.iran.liara.run/public',
       },
       type: "label",
     },
