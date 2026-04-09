@@ -7,8 +7,10 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "preinstall": "npx only-allow pnpm",
     "postinstall": "nuxt prepare"
   },
+  "packageManager": "pnpm@9.15.0",
   "dependencies": {
     "@iconify-json/flag": "^1.2.9",
     "@iconify-json/logos": "^1.2.9",
